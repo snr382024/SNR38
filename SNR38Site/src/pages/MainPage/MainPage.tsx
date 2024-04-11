@@ -1,12 +1,23 @@
-import React from 'react';
+//MainPage.tsx
 
-const Home: React.FC = () => {
+import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
+
+
+
+import DeannaBanner1 from "../../assets/bannerImages/Deanna-Banner.png";
+
+
+const MainPage = () => {
+  const images = [
+    { src: DeannaBanner1, alt: 'DeannaBanner' },
+
+  ];
+
   return (
     <div>
-      <h2>Welcome to the Home Page</h2>
-      <p>This is a small home page content.</p>
+      <ImageCarousel images={images}  />
     </div>
   );
-}
+};
 
-export default Home;
+export default MainPage;
