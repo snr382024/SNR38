@@ -1,19 +1,6 @@
 //imagecarousel.scss
 
-// Reset default margins and paddings
-html,
-body,
-div,
-img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
 
-body {
-  overflow-x: hidden; // Prevents horizontal scroll due to animation overflow
-}
 
 .carousel-container {
   position: relative;

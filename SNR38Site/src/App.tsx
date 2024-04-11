@@ -1,15 +1,15 @@
-import 'react';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-
-import MainPage from './pages/MainPage/MainPage';
+import "react";
+import CoverPage from "./pages/CoverPage/CoverPage";
+import NameDisplay from "./pages/NameDisplay/NameDisplay";
+import Deanna from "./pages/13DeannaMcnally/Deanna"
+import "./App.scss"
 
 function App() {
   return (
     <div>
-      <Header />
-        <MainPage />
-      <Footer />
+      <CoverPage />
+      <NameDisplay />
+      <Deanna />
     </div>
   );
 }
