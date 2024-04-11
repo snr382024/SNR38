@@ -1,6 +1,8 @@
 //Madisyn.tsx
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
-import MadisynBanner from "../../assets/bannerImages/Madisyn-Banner.png";
+
+//Change this banner to Madisyn when I acquire it
+import MadisynBanner from "../../assets/bannerImages/Deanna-Banner.png";
 import "./madisyn.scss";
 
 const MadisynMartinelli = () => {
