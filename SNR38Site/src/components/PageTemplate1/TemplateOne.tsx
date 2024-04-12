@@ -45,10 +45,10 @@ const TemplateOne: React.FC = () => {
             <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
-                  <img src={LongImage} alt="Front of the Dress" />
+                  <img src={LongImage2} alt="Front of the Dress" />
                 </div>
                 <div className="back">
-                  <img src={LongImage2} alt="Back of the Dress" />
+                  <img src={LongImage3} alt="Back of the Dress" />
                 </div>
               </div>
             </div>
@@ -65,10 +65,10 @@ const TemplateOne: React.FC = () => {
             <div className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
-                  <img src={LongImage} alt="Front of the Dress" />
+                  <img src={LongImage3} alt="Front of the Dress" />
                 </div>
                 <div className="back">
-                  <img src={LongImage2} alt="Back of the Dress" />
+                  <img src={LongImage4} alt="Back of the Dress" />
                 </div>
               </div>
             </div>
@@ -79,10 +79,10 @@ const TemplateOne: React.FC = () => {
             <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
-                  <img src={LongImage} alt="Front of the Dress" />
+                  <img src={LongImage4} alt="Front of the Dress" />
                 </div>
                 <div className="back">
-                  <img src={LongImage2} alt="Back of the Dress" />
+                  <img src={LongImage} alt="Back of the Dress" />
                 </div>
               </div>
             </div>
