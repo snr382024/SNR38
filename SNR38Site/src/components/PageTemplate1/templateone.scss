@@ -1,57 +1,154 @@
 .template-one-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh; // Ensure the container has a defined height to fill
-
-
-  .image-wrapper {
-    flex: 60%;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; // This spaces out the image columns evenly.
+    height: 98vh;
 
-    .image-column {
-        padding-top: 15px;
-        flex: 0 0 auto;
-        margin: 1em;
+    .image-wrapper {
+      flex: 1 0 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .column-type1,
+      .column-type2 {
+        height: 98vh;
+        width: calc(25% - 1vw);
+        margin-bottom: 2vh;
         display: flex;
         flex-direction: column;
-        gap: 1em;
-        align-items: center; // Center align the images within each column
-  
-        .rectangle,
-        .square {
-          width: 100%; // Make the width of the squares and rectangles the same.
-  
+        align-items: center;
+
+        .square,
+        .rectangle {
+          margin-bottom: 3.3vh;
           img {
-            display: block;
-            object-fit: cover; // Fill the content box without maintaining the aspect ratio.
-            width: 100%; // Full width of the parent
-            height: auto; // Height is auto to maintain aspect ratio
-            max-width: 100%; // Max width is restricted to 100%
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            width: 12vw;
+            height: auto;
+            box-shadow: 0px 0.4vw 0.6vw rgba(0, 0, 0, 0.3);
           }
         }
-  
+
         .rectangle {
           img {
-            height: 500px; // Fixed height for all rectangle images
+            height: 71vh;
           }
         }
       }
-  }
 
-  .video-container {
-    flex: 40%;
-    height: 100%; // This will make sure the video container has the same height as the image wrapper
-    overflow: hidden; // Prevent any overflow from the video
+      .column-type1 {
+        .rectangle {
+          order: 2;
+        }
+      }
 
-    video {
-      width: 100%; // Ensures the video takes the full width of its container.
-      height: 100%; // Ensures the video takes the full height of its container.
-      object-fit: cover; // Cover the container without stretching the video.
-      object-position: center 20%; // Align the top of the video with the top of the container.
+      .column-type2 {
+        .square {
+          order: 2;
+        }
+      }
     }
-  }
 
+    .video-container {
+      flex: 1 0 40%;
+      height: 98vh;
+      overflow: hidden;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+    }
+
+    // Media query for smaller screens
+
+    @media (max-width: 950px) { // Adjust the pixel value as needed
+        flex-direction: column;
+        align-items: center;
+  
+        .image-wrapper {
+          flex: 0 0 auto;
+          width: 100%;
+          justify-content: center;
+  
+          .column-type1,
+          .column-type2 {
+            width: 50%; // Adjust the width as needed
+            height: auto;
+            margin-bottom: 1vh;
+  
+            .square,
+            .rectangle {
+              img {
+                width: 20vw; // Adjust the size as needed
+                height: auto;
+              }
+            }
+            .rectangle {
+              img {
+                height: 50vh;
+              }
+            }
+          }
+        }
+  
+        .video-container {
+          flex: 0 0 auto;
+          width: 85vw; // Adjust the size as needed
+          height: auto;
+  
+          video {
+            width: 100%;
+            height: 70%;
+            object-position: center 20%;
+          }
+        }
+      }
+
+
+    @media (max-width: 650px) { // Adjust the pixel value as needed
+      flex-direction: column;
+      align-items: center;
+
+      .image-wrapper {
+        flex: 0 0 auto;
+        width: 100%;
+        justify-content: center;
+
+        .column-type1,
+        .column-type2 {
+          width: 50%; // Adjust the width as needed
+          height: auto;
+          margin-bottom: 1vh;
+
+          .square,
+          .rectangle {
+            img {
+              width: 32vw; // Adjust the size as needed
+              height: auto;
+            }
+          }
+          .rectangle {
+            img {
+              height: 50vh;
+            }
+          }
+        }
+      }
+
+      .video-container {
+        flex: 0 0 auto;
+        width: 85vw; // Adjust the size as needed
+        height: auto;
+
+        video {
+          width: 100%;
+          height: 70%;
+          object-position: center 20%;
+        }
+      }
+    }
 }

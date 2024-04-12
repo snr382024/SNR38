@@ -1,3 +1,5 @@
+//TemplateOnce.tsx
+
 import React from "react";
 import "./templateone.scss";
 
@@ -11,10 +13,11 @@ import ShortImage from "./media/ShortImage.png";
 import Video1 from "./media/video1.mp4";
 
 const TemplateOne: React.FC = () => {
+
   return (
     <div className="template-one-container">
       <div className="image-wrapper">
-        <div className="image-column">
+        <div className="column-type1">
           <div className="square">
             <img src={ShortImage} alt="Square Image" />
           </div>
@@ -22,7 +25,7 @@ const TemplateOne: React.FC = () => {
             <img src={LongImage} alt="Rectangle Image" />
           </div>
         </div>
-        <div className="image-column">
+        <div className="column-type2">
           <div className="rectangle">
             <img src={LongImage2} alt="Rectangle Image" />
           </div>
@@ -30,7 +33,7 @@ const TemplateOne: React.FC = () => {
             <img src={ShortImage} alt="Square Image" />
           </div>
         </div>
-        <div className="image-column">
+        <div className="column-type1">
           <div className="square">
             <img src={ShortImage} alt="Square Image" />
           </div>
@@ -38,7 +41,7 @@ const TemplateOne: React.FC = () => {
             <img src={LongImage3} alt="Rectangle Image" />
           </div>
         </div>
-        <div className="image-column">
+        <div className="column-type2">
           <div className="rectangle">
             <img src={LongImage4} alt="Rectangle Image" />
           </div>
