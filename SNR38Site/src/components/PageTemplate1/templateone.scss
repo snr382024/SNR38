@@ -1,3 +1,4 @@
+
 .template-one-container {
   margin-top: 3vh;
   margin-bottom: 1vh;
@@ -9,6 +10,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-right: 1vh;
+    padding-left: 1vh;
 
     .column-type1,
     .column-type2 {

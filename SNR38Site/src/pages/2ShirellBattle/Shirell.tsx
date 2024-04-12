@@ -10,16 +10,16 @@ import Short3 from "./media/ShortImage.png";
 import Short4 from "./media/ShortImage.png";
 
 import LongFront1 from "./media/LongImage.png";
-import LongBack1 from "./media/LongImage.png";
+import LongBack1 from "./media/LongImage2.png";
 
 import LongFront2 from "./media/LongImage2.png";
-import LongBack2 from "./media/LongImage2.png";
+import LongBack2 from "./media/LongImage3.png";
 
 import LongFront3 from "./media/LongImage3.png";
-import LongBack3 from "./media/LongImage3.png";
+import LongBack3 from "./media/LongImage4.png";
 
 import LongFront4 from "./media/LongImage4.png";
-import LongBack4 from "./media/LongImage4.png";
+import LongBack4 from "./media/LongImage.png";
 
 import ShirellVideo from "./media/video1.mp4";
 
