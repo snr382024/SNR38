@@ -6,11 +6,11 @@ import DaisyBanner from "../../assets/bannerImages/Deanna-Banner.png";
 import "./daisy.scss";
 
 const DaisyAnguisacaLazo = () => {
-  const images = [{ src: DaisyBanner, alt: "DaisyBanner" }];
+  const banner = [{ src: DaisyBanner, alt: "DaisyBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

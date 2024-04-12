@@ -4,11 +4,11 @@ import DeannaBanner from "../../assets/bannerImages/Deanna-Banner.png";
 import "./deanna.scss";
 
 const DeannaMcnally = () => {
-  const images = [{ src: DeannaBanner, alt: "DeannaBanner" }];
+  const banner = [{ src: DeannaBanner, alt: "DeannaBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

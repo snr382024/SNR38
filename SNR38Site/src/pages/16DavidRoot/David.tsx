@@ -4,11 +4,11 @@ import DavidBanner from "../../assets/bannerImages/David-Banner.png";
 import "./david.scss";
 
 const DavidRoot = () => {
-  const images = [{ src: DavidBanner, alt: "DavidBanner" }];
+  const banner = [{ src: DavidBanner, alt: "DavidBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

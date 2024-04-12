@@ -4,11 +4,11 @@ import CaitlinBanner from "../../assets/bannerImages/Caitlin-Banner.png";
 import "./caitlin.scss";
 
 const  CaitlinFracasso = () => {
-  const images = [{ src: CaitlinBanner, alt: "CaitlinBanner" }];
+  const banner = [{ src: CaitlinBanner, alt: "CaitlinBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

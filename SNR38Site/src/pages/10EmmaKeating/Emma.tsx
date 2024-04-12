@@ -4,11 +4,11 @@ import EmmaBanner from "../../assets/bannerImages/Emma-Banner.png";
 import "./emma.scss";
 
 const EmmaKeating = () => {
-  const images = [{ src: EmmaBanner, alt: "EmmaBanner" }];
+  const banner = [{ src: EmmaBanner, alt: "EmmaBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

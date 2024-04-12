@@ -4,11 +4,11 @@ import NicoleBanner from "../../assets/bannerImages/Nicole-Banner.png";
 import "./nicole.scss";
 
 const NicoleTasca = () => {
-  const images = [{ src: NicoleBanner, alt: "NicoleBanner" }];
+  const banner = [{ src: NicoleBanner, alt: "NicoleBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };
