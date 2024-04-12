@@ -5,9 +5,11 @@ import "./imagecarousel.scss";
 
 interface ImageCarouselProps {
   images: { src: string; alt?: string }[];
+  collectionName?: string; 
+  designerName?: string; 
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, collectionName, designerName }) => {
   const [isPaused, setIsPaused] = useState(false);
 
   // Calculate the total width needed for all images plus duplicates
@@ -50,7 +52,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       <div className="carousel-overlay"></div> 
 
       <div className="carousel-text">
-        <p>Name of designer</p>
+      {collectionName && <p>{collectionName}</p>}
+        {designerName && <p>{designerName}</p>}
       </div>
     </div>
   );

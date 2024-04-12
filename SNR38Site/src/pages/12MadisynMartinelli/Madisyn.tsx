@@ -2,7 +2,7 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 
 //Change this banner to Madisyn when I acquire it
-import MadisynBanner from "../../assets/bannerImages/Deanna-Banner.png";
+import MadisynBanner from "../../assets/bannerImages/Madisyn-Banner.png";
 import "./madisyn.scss";
 
 const MadisynMartinelli = () => {

@@ -1,5 +1,7 @@
 //Alyssa.tsx
+
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
+
 import AlyssaBanner from "../../assets/bannerImages/Alyssa-Banner.png";
 import "./alyssa.scss";
 

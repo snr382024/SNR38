@@ -1,0 +1,57 @@
+.template-one-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; // Ensure the container has a defined height to fill
+
+
+  .image-wrapper {
+    flex: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; // This spaces out the image columns evenly.
+
+    .image-column {
+        padding-top: 15px;
+        flex: 0 0 auto;
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center; // Center align the images within each column
+  
+        .rectangle,
+        .square {
+          width: 100%; // Make the width of the squares and rectangles the same.
+  
+          img {
+            display: block;
+            object-fit: cover; // Fill the content box without maintaining the aspect ratio.
+            width: 100%; // Full width of the parent
+            height: auto; // Height is auto to maintain aspect ratio
+            max-width: 100%; // Max width is restricted to 100%
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+          }
+        }
+  
+        .rectangle {
+          img {
+            height: 500px; // Fixed height for all rectangle images
+          }
+        }
+      }
+  }
+
+  .video-container {
+    flex: 40%;
+    height: 100%; // This will make sure the video container has the same height as the image wrapper
+    overflow: hidden; // Prevent any overflow from the video
+
+    video {
+      width: 100%; // Ensures the video takes the full width of its container.
+      height: 100%; // Ensures the video takes the full height of its container.
+      object-fit: cover; // Cover the container without stretching the video.
+      object-position: center 20%; // Align the top of the video with the top of the container.
+    }
+  }
+
+}

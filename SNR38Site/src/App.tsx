@@ -2,8 +2,8 @@ import "react";
 import CoverPage from "./pages/CoverPage/CoverPage";
 import NameDisplay from "./pages/NameDisplay/NameDisplay";
 
-import Daisy from "./pages/1DaisyAnguisacaLazo/Daisy";
-// import Shirell from "./pages/2ShirellBattle/Shirell";
+// import Daisy from "./pages/1DaisyAnguisacaLazo/Daisy";
+import Shirell from "./pages/2ShirellBattle/Shirell";
 // import Olivia from "./pages/3OliviaCavallero/Olivia";
 // import Aliah from "./pages/4AliahChammoro/Aliah";
 // import Gavin from "./pages/5GavinCooper/Gavin";
@@ -33,9 +33,9 @@ function App() {
       <CoverPage />
       <NameDisplay />
 
-      <Daisy />
-      {/* <Shirell />
-      <Olivia />
+      {/* <Daisy /> */}
+      <Shirell />
+      {/* <Olivia />
       <Aliah />
       <Gavin />
       <Sera />
