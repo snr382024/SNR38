@@ -7,40 +7,62 @@ type TemplateThreeProps = {
   videoSrc: string;
 };
 
-const TemplateThree: React.FC<TemplateThreeProps> = ({ images, colors, videoSrc }) => {
+const TemplateThree: React.FC<TemplateThreeProps> = ({
+  images,
+  colors,
+  videoSrc,
+}) => {
   return (
     <div className="template-three-container">
-      <div className="column column-first">
+      <div className="column-first">
         <div className="image-cell">
           <img src={images[0].src} alt={images[0].alt} />
         </div>
       </div>
-      <div className="column column-video">
-        <video src={videoSrc} loop autoPlay muted playsInline />
+      <div className="column-video">
+        <div className="video-container">
+          <video src={videoSrc} loop autoPlay muted playsInline />
+        </div>
       </div>
-      <div className="column column-third">
+      <div className="column-third">
         <div className="image-cell">
           <img src={images[1].src} alt={images[1].alt} />
         </div>
         <div className="color-style">
-      <div className="color-row">
-        <div className="color1" style={{ backgroundColor: colors[0] }}></div>
-        <div className="color2" style={{ backgroundColor: colors[1] }}></div>
+          <div className="color-row">
+            <div
+              className="color1"
+              style={{ backgroundColor: colors[0] }}
+            ></div>
+            <div
+              className="color2"
+              style={{ backgroundColor: colors[1] }}
+            ></div>
+          </div>
+          <div className="color-row">
+            <div
+              className="color3"
+              style={{ backgroundColor: colors[2] }}
+            ></div>
+            <div
+              className="color4"
+              style={{ backgroundColor: colors[3] }}
+            ></div>
+          </div>
+        </div>
       </div>
-      <div className="color-row">
-        <div className="color3" style={{ backgroundColor: colors[2] }}></div>
-        <div className="color4" style={{ backgroundColor: colors[3] }}></div>
-      </div>
-    </div>
-      </div>
-      <div className="column column-fourth">
+      <div className="column-fourth">
         <div className="image-cell">
-          <img src={images[2].src} alt={images[2].alt} />
+          <div className="square-image">
+            <img src={images[2].src} alt={images[2].alt} />
+          </div>
         </div>
         <div className="image-row">
           {images.slice(3, 5).map((image, index) => (
             <div key={index + 3} className="image-cell">
-              <img src={image.src} alt={image.alt} />
+              <div className="rectangle-image">
+                <img src={image.src} alt={image.alt} />
+              </div>
             </div>
           ))}
         </div>

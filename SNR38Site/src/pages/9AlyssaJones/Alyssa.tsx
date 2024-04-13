@@ -24,7 +24,7 @@ const AlyssaJones = () => {
     { src: Rectangle1, alt: "Rectangle1" },
     { src: Rectangle2, alt: "Rectangle2" },
     { src: Square1, alt: "Square1" },
-    { src: Rectangle3, alt: "Rectangle3" },
+    { src: Rectangle4, alt: "Rectangle3" },
     { src: Rectangle4, alt: "Rectangle4" },
   ];
 
