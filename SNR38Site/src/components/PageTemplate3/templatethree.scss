@@ -1,0 +1,141 @@
+.template-three-container {
+  display: flex;
+  height: 100vh; // Ensure the container fills the viewport height
+  align-items: stretch; // Stretch children to fill the container height
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+
+  .column {
+    flex: 1; // Each column takes equal width
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; // Prevents any content from overflowing its column
+
+    .image-cell,
+    .column-video {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; // Ensures content does not overflow
+
+      img,
+      video {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain; // Ensures the video maintains aspect ratio without filling the entire container
+      }
+    }
+  }
+
+  .column-video {
+    video {
+      height: 100%; // Sets the video height to fill its container
+      width: 100%; // Sets the video width to fill its container
+      object-fit: contain; // Ensures the video is contained within its aspect ratio
+    }
+  }
+
+  .column-third {
+    img {
+      height: 80vh;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+  .color-style {
+    display: flex;
+    flex-direction: column; // Align color rows vertically
+    justify-content: space-around; // Space rows evenly from top to bottom
+    align-items: center; // Center the color rows horizontally
+    flex-grow: 1; // Let the color-style take up available space
+
+    .color-row {
+      display: flex; // Enable flex layout to manage color divs
+      justify-content: space-around; // Space the divs evenly in the row
+      align-items: center; // Center the color divs vertically
+      width: 100%; // Full width of the column
+      flex: 1; // Distribute space evenly between rows
+
+      div {
+        height: calc(
+          25vh - 4px
+        ); // Set height based on container height minus any margins
+        width: calc(
+          25vh - 4px
+        ); // Set width the same as height for square shape
+        margin: 2px; // Optional: if you want a small gap between squares
+      }
+    }
+  }
+
+  .column-fourth {
+    display: flex; // Sets up a flex container
+    flex-direction: column; // Aligns children in a column, one on top of the other
+    justify-content: flex-start; // Aligns children to the start of the column
+    align-items: center; // Aligns children horizontally in the center
+    height: 100%; // Ensures the column takes the full height of the container
+
+    .image-cell {
+      width: 100%; // Each image cell takes the full width of the column
+
+      &:first-child {
+        // Assuming the first child is the top image
+        margin-bottom: 10px; // Adds some space between the first and the second image
+      }
+
+      img {
+        width: 100%; // Image will fill the available width
+        height: auto; // Image height will scale to maintain aspect ratio
+        object-fit: contain; // Image will scale to fit within its frame
+      }
+    }
+
+    .image-row {
+      display: flex; // Sets up a flex container
+      justify-content: space-around; // Spaces out the children evenly
+      width: 100%; // Takes the full width of the column
+
+      .image-cell {
+        width: 50%; // Each image cell will take up half of the row width
+        height: calc(
+          50vw / 2
+        ); // Sets the height of each image cell based on the viewport width
+        display: flex;
+        justify-content: center; // Centers the image horizontally
+        align-items: center; // Centers the image vertically
+
+        img {
+          width: 100%; // Ensures the image width is the same as the image cell
+          height: 100%; // Ensures the image height is the same as the image cell
+          object-fit: cover; // Covers the frame, may cut off parts of the image
+        }
+      }
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+
+      button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
