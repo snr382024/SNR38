@@ -10,13 +10,13 @@ import Shirell from "./pages/2ShirellBattle/Shirell";
 // import Sera from "./pages/6SeraCristinFerrante/Sera";
 // import Caitlin from "./pages/7CaitlinFracasso/Caitlin";
 // import Annika from "./pages/8AnnikaGeissberger/Annika";
-import Alyssa from "./pages/9AlyssaJones/Alyssa";
+// import Alyssa from "./pages/9AlyssaJones/Alyssa";
 // import Emma from "./pages/10EmmaKeating/Emma";
 // import Shannon from "./pages/11ShannonKonecke/Shannon";
 // import Madisyn from "./pages/12MadisynMartinelli/Madisyn";
 // import Deanna from "./pages/13DeannaMcnally/Deanna";
 // import Francesca from "./pages/14FrancescaMorabito/Francesca";
-// import Eva from "./pages/15EvaReed/Eva";
+import Eva from "./pages/15EvaReed/Eva";
 // import David from "./pages/16DavidRoot/David";
 // import Natalie from "./pages/17NatalieSweeney/Natalie";
 // import Nicole from "./pages/18NicoleTasca/Nicole";
@@ -41,15 +41,15 @@ function App() {
       <Sera />
       <Caitlin />
       <Annika /> */}
-      <Alyssa />
+      {/* <Alyssa /> */}
       {/* <Emma />
       <Shannon />
       <Madisyn />
       <Deanna />
-      <Francesca />
+      <Francesca /> */}
       <Eva />
-      <David />
-      <Natalie />
+      {/* <David /> */}
+      {/* <Natalie />
       <Nicole />
       <Mo />
       <SierraWeissner /> */}

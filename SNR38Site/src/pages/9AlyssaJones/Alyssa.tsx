@@ -8,7 +8,6 @@ import Square1 from "./media/Square1.png";
 
 import Rectangle1 from "./media/Rectangle1.png";
 import Rectangle2 from "./media/Rectangle2.png";
-import Rectangle3 from "./media/Rectangle3.png";
 import Rectangle4 from "./media/Rectangle4.png";
 
 import AlyssaVideo from "./media/video1.mp4";

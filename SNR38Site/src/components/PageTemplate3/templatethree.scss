@@ -49,7 +49,7 @@ img, video {
       width: 100%; // Video container takes the full width of the column
       video {
         width: 100%; // Video fills the container
-        height: auto;
+        height: 750px;
         max-height: 90vh;
         object-fit: cover;
       }
