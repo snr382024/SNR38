@@ -1,74 +1,192 @@
-import React from "react";
+//TemplateThree.tsx
+
+import React, { useState, useEffect } from "react";
 import "./templatethree.scss";
 
 type TemplateThreeProps = {
   images: { src: string; alt: string }[];
-  colors: string[];
   videoSrc: string;
 };
 
-const TemplateThree: React.FC<TemplateThreeProps> = ({
-  images,
-  colors,
-  videoSrc,
-}) => {
-  return (
+const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
+  const [isFlipped, setIsFlipped] = useState(
+    new Array(images.length).fill(false)
+  );
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 950);
+
+  const handleFlip = (index: number) => {
+    const flippedStates = [...isFlipped];
+    flippedStates[index] = !flippedStates[index];
+    setIsFlipped(flippedStates);
+  };
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 950);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const desktopTemplate = (
     <div className="template-three-container">
-      <div className="column-first">
-        <div className="image-cell">
-          <img src={images[0].src} alt={images[0].alt} />
-        </div>
-      </div>
-      <div className="column-video">
-        <div className="video-container">
-          <video src={videoSrc} loop autoPlay muted playsInline />
-        </div>
-      </div>
-      <div className="column-third">
-        <div className="image-cell">
-          <img src={images[1].src} alt={images[1].alt} />
-        </div>
-        <div className="color-style">
-          <div className="color-row">
-            <div
-              className="color1"
-              style={{ backgroundColor: colors[0] }}
-            ></div>
-            <div
-              className="color2"
-              style={{ backgroundColor: colors[1] }}
-            ></div>
+      <div className="image-wrapper">
+        <div className="column-type1">
+          <div className="square">
+            <img src={images[0].src} alt={images[0].alt} />
           </div>
-          <div className="color-row">
-            <div
-              className="color3"
-              style={{ backgroundColor: colors[2] }}
-            ></div>
-            <div
-              className="color4"
-              style={{ backgroundColor: colors[3] }}
-            ></div>
-          </div>
-        </div>
-      </div>
-      <div className="column-fourth">
-        <div className="image-cell">
-          <div className="square-image">
-            <img src={images[2].src} alt={images[2].alt} />
-          </div>
-        </div>
-        <div className="image-row">
-          {images.slice(3, 5).map((image, index) => (
-            <div key={index + 3} className="image-cell">
-              <div className="rectangle-image">
-                <img src={image.src} alt={image.alt} />
+          <div className="rectangle" onClick={() => handleFlip(0)}>
+            <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[4].src} alt={images[4].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[5].src} alt={images[5].alt} />
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+      <div className="video-container">
+        <video src={videoSrc} loop autoPlay muted playsInline />
+      </div>
+        <div className="column-type2">
+          <div className="rectangle" onClick={() => handleFlip(1)}>
+            <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[6].src} alt={images[6].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[7].src} alt={images[7].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="square">
+            <img src={images[1].src} alt={images[1].alt} />
+          </div>
+        </div>
+        <div className="column-type1">
+          <div className="square">
+            <img src={images[2].src} alt={images[2].alt} />
+          </div>
+          <div className="rectangle" onClick={() => handleFlip(2)}>
+            <div className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[8].src} alt={images[8].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[9].src} alt={images[9].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="column-type2">
+          <div className="rectangle" onClick={() => handleFlip(3)}>
+            <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[10].src} alt={images[10].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[11].src} alt={images[11].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="square">
+            <img src={images[3].src} alt={images[3].alt} />
+          </div>
         </div>
       </div>
     </div>
   );
+
+  const mobileTemplate = (
+    <div className="template-three-container">
+      <div className="image-wrapper">
+        <div className="column-type1">
+          <div className="square">
+            <img src={images[0].src} alt={images[0].alt} />
+          </div>
+          <div className="rectangle" onClick={() => handleFlip(0)}>
+            <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[4].src} alt={images[4].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[5].src} alt={images[5].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="column-type2">
+          <div className="rectangle" onClick={() => handleFlip(1)}>
+            <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[6].src} alt={images[6].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[7].src} alt={images[7].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="square">
+            <img src={images[1].src} alt={images[1].alt} />
+          </div>
+        </div>
+        <div className="column-type1">
+          <div className="square">
+            <img src={images[2].src} alt={images[2].alt} />
+          </div>
+          <div className="rectangle" onClick={() => handleFlip(2)}>
+            <div className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[8].src} alt={images[8].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[9].src} alt={images[9].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="column-type2">
+          <div className="rectangle" onClick={() => handleFlip(3)}>
+            <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
+              <div className="flipper">
+                <div className="front">
+                  <img src={images[10].src} alt={images[10].alt} />
+                </div>
+                <div className="back">
+                  <img src={images[11].src} alt={images[11].alt} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="square">
+            <img src={images[3].src} alt={images[3].alt} />
+          </div>
+        </div>
+      </div>
+      <div className="video-container">
+        <video src={videoSrc} loop autoPlay muted playsInline />
+      </div>
+    </div>
+  );
+
+  return isMobile ? mobileTemplate : desktopTemplate;
 };
 
 export default TemplateThree;

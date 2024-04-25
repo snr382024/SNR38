@@ -17,11 +17,11 @@ import Shirell from "./pages/2ShirellBattle/Shirell";
 // import Deanna from "./pages/13DeannaMcnally/Deanna";
 // import Francesca from "./pages/14FrancescaMorabito/Francesca";
 import Eva from "./pages/15EvaReed/Eva";
-// import David from "./pages/16DavidRoot/David";
+import David from "./pages/16DavidRoot/David";
 // import Natalie from "./pages/17NatalieSweeney/Natalie";
 // import Nicole from "./pages/18NicoleTasca/Nicole";
 // import Mo from "./pages/19MoWalsh/Mo";
-// import SierraWeissner from "./pages/20SierraWeissner/Sierra";
+import SierraWeissner from "./pages/20SierraWeissner/Sierra";
 
 
 
@@ -48,11 +48,11 @@ function App() {
       <Deanna />
       <Francesca /> */}
       <Eva />
-      {/* <David /> */}
+      <David />
       {/* <Natalie />
       <Nicole />
-      <Mo />
-      <SierraWeissner /> */}
+      <Mo /> */}
+      <SierraWeissner />
 
 
     </div>

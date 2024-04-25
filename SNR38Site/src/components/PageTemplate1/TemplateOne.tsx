@@ -1,6 +1,4 @@
-//TemplateOnce.tsx
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./templateone.scss";
 
 type TemplateOneProps = {
@@ -9,32 +7,74 @@ type TemplateOneProps = {
 };
 
 const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
-  const [isFlipped, setIsFlipped] = useState(
-    new Array(images.length).fill(false)
-  );
+  const [isFlipped, setIsFlipped] = useState(new Array(images.length).fill(false));
+  const [showOverlay, setShowOverlay] = useState(new Array(images.length).fill(false));
+
+  // Scroll event handler for flipping and overlay
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerHeight = window.innerHeight / 2;
+
+      // Get the first rectangle for the overlay
+      const firstElem = document.querySelector('.rectangle:nth-child(2)');
+
+      images.forEach((img, index) => {
+        const elem = document.querySelector(`.rectangle:nth-child(${index + 2})`);
+
+        if (elem && window.scrollY + triggerHeight > elem.getBoundingClientRect().top + window.scrollY) {
+          setIsFlipped(flips => flips.map((flipped, flipIndex) => flipIndex === index ? true : flipped));
+
+          // Set overlay only for the first image
+          if (index === 0 && !isFlipped[0]) {
+            setShowOverlay(overlays => overlays.map((overlay, overlayIndex) => overlayIndex === 0));
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [images, isFlipped]);
+
+  useEffect(() => {
+    // Only set up the timer if the first image is flipped and the overlay is shown
+    if (isFlipped[0] && showOverlay[0]) {
+      const timer = setTimeout(() => {
+        setShowOverlay(overlays => overlays.map((overlay, overlayIndex) => overlayIndex === 0 ? false : overlay));
+        setIsFlipped(flips => flips.map((flipped, flipIndex) => flipIndex === 0 ? false : flipped));
+      }, 5000); // Wait for 5 seconds before hiding the overlay and flipping back
+  
+      // Cleanup the timeout if the component unmounts
+      return () => clearTimeout(timer);
+    }
+  }, [isFlipped[0], showOverlay[0]]);
 
   const handleFlip = (index: number) => {
-    const flippedStates = [...isFlipped];
-    flippedStates[index] = !flippedStates[index];
-    setIsFlipped(flippedStates);
+    const newFlipped = [...isFlipped];
+    const newOverlay = [...showOverlay];
+    newFlipped[index] = !newFlipped[index];
+    newOverlay[index] = false;  // Hide overlay on click
+    setIsFlipped(newFlipped);
+    setShowOverlay(newOverlay);
   };
 
   return (
     <div className="template-one-container">
       <div className="image-wrapper">
-        <div className="column-type1">
+      <div className="column-type1">
           <div className="square">
             <img src={images[0].src} alt={images[0].alt} />
           </div>
-          <div className="rectangle" onClick={() => handleFlip(0)}>
+          <div className={`rectangle ${showOverlay[0] ? "with-overlay" : ""}`} onClick={() => handleFlip(0)}>
             <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
-                  <img src={images[4].src} alt={images[4].alt} />
-                </div>
-                <div className="back">
                   <img src={images[5].src} alt={images[5].alt} />
                 </div>
+                <div className="back">
+                  <img src={images[4].src} alt={images[4].alt} />
+                </div>
+                {showOverlay[0] && <div className="overlay">Click to flip garment</div>}
               </div>
             </div>
           </div>

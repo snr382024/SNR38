@@ -84,26 +84,22 @@
 @media (max-width: 768px) {
   .name-display .name-row {
     justify-content: center;
-
-    // Adjust basis for items when there's less space
-    &.row-4 .name-tag {
-      flex-basis: calc(100% / 3 - 24px); // Adjust for 3 items per row
-    }
+    &.row-4 .name-tag,
     &.row-3 .name-tag,
     &.row-2 .name-tag {
-      flex-basis: calc(100% / 2 - 24px); // Adjust for 2 items per row
+      flex-basis: calc(50% - 12px); // Adjust for 2 items per row
+      margin: 10px 6px; // Reduced margin for tighter fitting
     }
   }
 }
 
 @media (max-width: 480px) {
   .name-display .name-row {
-    // Adjust basis for items on smaller screens
     &.row-4 .name-tag,
     &.row-3 .name-tag,
     &.row-2 .name-tag {
-      flex-basis: 100%; // Each name takes the full width
-      margin: 10px 0; // Adjust margin for vertical stacking
+      flex-basis: calc(50% - 12px); // Maintain two columns on small screens
+      margin: 10px 6px; // Consistent margin for alignment
     }
   }
 }
