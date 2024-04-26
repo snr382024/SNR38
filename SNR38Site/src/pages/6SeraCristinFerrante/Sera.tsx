@@ -4,11 +4,11 @@ import SeraBanner from "../../assets/bannerImages/Sera-Banner.png";
 import "./sera.scss";
 
 const SeraCristinFerrante = () => {
-  const images = [{ src: SeraBanner, alt: "SeraBanner" }];
+  const banner = [{ src: SeraBanner, alt: "SeraBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

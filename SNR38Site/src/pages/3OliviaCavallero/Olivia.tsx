@@ -4,11 +4,11 @@ import OliviaBanner from "../../assets/bannerImages/Olivia-Banner.png";
 import "./olivia.scss";
 
 const  OliviaCavallero = () => {
-  const images = [{ src: OliviaBanner, alt: "OliviaBanner" }];
+  const banner = [{ src: OliviaBanner, alt: "OliviaBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

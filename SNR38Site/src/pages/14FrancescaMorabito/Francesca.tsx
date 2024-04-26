@@ -4,11 +4,11 @@ import FrancescaBanner from "../../assets/bannerImages/Francesca-Banner.png";
 import "./francesca.scss";
 
 const FrancescaMorabito = () => {
-  const images = [{ src: FrancescaBanner, alt: "FrancescaBanner" }];
+  const banner = [{ src: FrancescaBanner, alt: "FrancescaBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

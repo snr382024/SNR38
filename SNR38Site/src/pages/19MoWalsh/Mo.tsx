@@ -4,11 +4,11 @@ import MoBanner from "../../assets/bannerImages/Mo-Banner.png";
 import "./mo.scss";
 
 const MoWalsh = () => {
-  const images = [{ src: MoBanner, alt: "MoBanner" }];
+  const banner = [{ src: MoBanner, alt: "MoBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

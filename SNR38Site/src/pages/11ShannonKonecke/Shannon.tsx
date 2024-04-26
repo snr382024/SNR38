@@ -4,11 +4,11 @@ import ShannonBanner from "../../assets/bannerImages/Shannon-Banner.png";
 import "./shannon.scss";
 
 const ShannonKonecke = () => {
-  const images = [{ src: ShannonBanner, alt: "ShannonBanner" }];
+  const banner = [{ src: ShannonBanner, alt: "ShannonBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };

@@ -4,11 +4,11 @@ import NatalieBanner from "../../assets/bannerImages/Natalie-Banner.png";
 import "./natalie.scss";
 
 const NatalieSweeney = () => {
-  const images = [{ src: NatalieBanner, alt: "NatalieBanner" }];
+  const banner = [{ src: NatalieBanner, alt: "NatalieBanner" }];
 
   return (
     <div>
-      <ImageCarousel images={images} />
+      <ImageCarousel images={banner} />
     </div>
   );
 };
