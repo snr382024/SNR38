@@ -16,9 +16,9 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
       const triggerHeight = window.innerHeight / 2;
 
       // Get the first rectangle for the overlay
-      const firstElem = document.querySelector('.rectangle:nth-child(2)');
+      //const firstElem = document.querySelector('.rectangle:nth-child(2)');
 
-      images.forEach((img, index) => {
+      images.forEach((_img, index) => {
         const elem = document.querySelector(`.rectangle:nth-child(${index + 2})`);
 
         if (elem && window.scrollY + triggerHeight > elem.getBoundingClientRect().top + window.scrollY) {
@@ -26,7 +26,7 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
 
           // Set overlay only for the first image
           if (index === 0 && !isFlipped[0]) {
-            setShowOverlay(overlays => overlays.map((overlay, overlayIndex) => overlayIndex === 0));
+            setShowOverlay(overlays => overlays.map((_overlay, overlayIndex) => overlayIndex === 0));
           }
         }
       });
