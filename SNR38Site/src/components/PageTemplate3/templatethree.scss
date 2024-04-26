@@ -1,9 +1,25 @@
+$background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
+
 .template-three-container {
   margin-top: 4.5vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around; // This will distribute space around all items evenly
   align-items: flex-start;
+
+  @keyframes fadeInOut {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    10%,
+    80% {
+      opacity: 1;
+    } // The overlay will start fading out after 4 seconds
+    100% {
+      opacity: 0;
+    }
+  }
 
   .image-wrapper {
     display: flex;
@@ -24,22 +40,51 @@
         img {
           width: 12vw;
           height: auto;
-          box-shadow: 0px 0.4vw 0.6vw rgba(0, 0, 0, 0.4);
-          
+          box-shadow: $background-shadow;
         }
       }
 
       .rectangle {
+        position: relative;
         perspective: 1000px;
         width: 12vw;
         height: 71vh;
         cursor: pointer;
+        // Overlay and icon wrapper
+        .arrow-icon-wrapper {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          width: 35px;
+          height: 35px;
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 10px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          opacity: 0; // start hidden
+          visibility: hidden; // start fully hidden
+          transition: opacity 0.5s ease, visibility 0.5s ease;
+        
+          &.visible {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        // Arrow icon specific styling
+        .arrow-icon {
+          width: 25px; // Independently adjustable size of the arrow
+          height: 25px; // Independently adjustable size of the arrow
+        }
         img {
           width: 12vw;
           height: 71vh;
           transition: transform 0.6s;
           transform-style: preserve-3d;
-          box-shadow: 0px 0.4vw 0.6vw rgba(0, 0, 0, 0.4);
+          box-shadow: $background-shadow;
         }
         .flip-container {
           width: 100%;
@@ -93,12 +138,12 @@
 
   .video-container {
     flex: 2.5; // The video container takes up 2 parts of the space, twice as much as each column
-    max-height: 97vh; // This sets the maximum height the video can have
+    max-height: 120vh; // This sets the maximum height the video can have
     min-height: 50vh; // This sets a minimum height to ensure it doesn't become too small
     margin-bottom: 6vh; // Consistent bottom margin outside of media query
     overflow: hidden;
     position: relative;
-    box-shadow: 0px 0.4vw 0.6vw rgba(0, 0, 0, 0.4);
+    box-shadow: $background-shadow;
     aspect-ratio: 16 / 9; // Maintain a 16:9 aspect ratio
 
     video {
@@ -109,8 +154,6 @@
     }
   }
 
-
-  
   // Media query for smaller screens
 
   @media (max-width: 950px) {
@@ -139,7 +182,7 @@
           img {
             width: 20vw;
             height: auto;
-            box-shadow: 0px 0.4vw 0.6vw rgba(0, 0, 0, 0.4);
+            box-shadow: $background-shadow;
           }
         }
         .rectangle {
@@ -148,7 +191,7 @@
           img {
             width: 20vw;
             height: 41vh;
-            box-shadow: 0px 0.4vw 0.6vw rgba(0, 0, 0, 0.4);
+            box-shadow: $background-shadow;
           }
         }
       }

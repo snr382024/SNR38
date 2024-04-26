@@ -61,11 +61,14 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
   return (
     <div className="template-one-container">
       <div className="image-wrapper">
-      <div className="column-type1">
+        <div className="column-type1">
           <div className="square">
             <img src={images[0].src} alt={images[0].alt} />
           </div>
-          <div className={`rectangle ${showOverlay[0] ? "with-overlay" : ""}`} onClick={() => handleFlip(0)}>
+          <div
+            className={`rectangle ${showOverlay[0] ? "with-overlay" : ""}`}
+            onClick={() => handleFlip(0)}
+          >
             <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -74,7 +77,7 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
                 <div className="back">
                   <img src={images[4].src} alt={images[4].alt} />
                 </div>
-                {showOverlay[0] && <div className="overlay">Click to flip garment</div>}
+                {showOverlay[0] && <div className="overlay">CLICK TO FLIP</div>}
               </div>
             </div>
           </div>
@@ -125,6 +128,7 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+
           </div>
           <div className="square">
             <img src={images[3].src} alt={images[3].alt} />

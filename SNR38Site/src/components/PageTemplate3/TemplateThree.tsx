@@ -1,6 +1,7 @@
 //TemplateThree.tsx
+import React, { useState, useEffect, useRef } from "react";
+import arrowIcon from "../../assets/icons/arrow-right-white.png";
 
-import React, { useState, useEffect } from "react";
 import "./templatethree.scss";
 
 type TemplateThreeProps = {
@@ -12,15 +13,38 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
   const [isFlipped, setIsFlipped] = useState(
     new Array(images.length).fill(false)
   );
+  const [isVisible, setIsVisible] = useState(
+    new Array(images.length).fill(false)
+  );
   const [isMobile, setIsMobile] = useState(window.innerWidth < 950);
+  const refs = images.map(() => useRef<HTMLDivElement>(null));
+  const fadeOutTimers = useRef<number[]>([]);
 
-  const handleFlip = (index: number) => {
-    const flippedStates = [...isFlipped];
-    flippedStates[index] = !flippedStates[index];
-    setIsFlipped(flippedStates);
+  const handleVisibilityChange = (index: number, visible: boolean) => {
+    clearTimeout(fadeOutTimers.current[index]);
+    if (visible) {
+      setIsVisible((vis) => {
+        const newVis = [...vis];
+        newVis[index] = true;
+        return newVis;
+      });
+      // Set timeout to fade out
+      fadeOutTimers.current[index] = window.setTimeout(() => {
+        setIsVisible((vis) => {
+          const newVis = [...vis];
+          newVis[index] = false;
+          return newVis;
+        });
+      }, 5000);
+    } else {
+      setIsVisible((vis) => {
+        const newVis = [...vis];
+        newVis[index] = false;
+        return newVis;
+      });
+    }
   };
 
-  // Handle window resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 950);
@@ -30,6 +54,43 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = refs.findIndex((ref) => ref.current === entry.target);
+          if (index !== -1) {
+            handleVisibilityChange(index, entry.isIntersecting);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    refs.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      refs.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+      fadeOutTimers.current.forEach(clearTimeout);
+    };
+  }, []);
+
+  const handleFlip = (index: number) => {
+    setIsFlipped((flipped) => {
+      const newFlipped = [...flipped];
+      newFlipped[index] = !newFlipped[index];
+      return newFlipped;
+    });
+  };
+
   const desktopTemplate = (
     <div className="template-three-container">
       <div className="image-wrapper">
@@ -37,7 +98,11 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
           <div className="square">
             <img src={images[0].src} alt={images[0].alt} />
           </div>
-          <div className="rectangle" onClick={() => handleFlip(0)}>
+          <div
+            className="rectangle"
+            ref={refs[0]}
+            onClick={() => handleFlip(0)}
+          >
             <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -48,13 +113,23 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
         </div>
-      <div className="video-container">
-        <video src={videoSrc} loop autoPlay muted playsInline />
-      </div>
+        <div className="video-container">
+          <video src={videoSrc} loop autoPlay muted playsInline />
+        </div>
         <div className="column-type2">
-          <div className="rectangle" onClick={() => handleFlip(1)}>
+          <div
+            className="rectangle"
+            ref={refs[1]}
+            onClick={() => handleFlip(1)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -65,6 +140,11 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[1] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
           <div className="square">
             <img src={images[1].src} alt={images[1].alt} />
@@ -74,7 +154,12 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
           <div className="square">
             <img src={images[2].src} alt={images[2].alt} />
           </div>
-          <div className="rectangle" onClick={() => handleFlip(2)}>
+          <div
+            className="rectangle"
+            ref={refs[2]}
+            onClick={() => handleFlip(2)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -85,10 +170,20 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[2] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
         </div>
         <div className="column-type2">
-          <div className="rectangle" onClick={() => handleFlip(3)}>
+          <div
+            className="rectangle"
+            ref={refs[3]}
+            onClick={() => handleFlip(3)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -98,6 +193,11 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                   <img src={images[11].src} alt={images[11].alt} />
                 </div>
               </div>
+            </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[3] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>
           </div>
           <div className="square">
@@ -115,7 +215,12 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
           <div className="square">
             <img src={images[0].src} alt={images[0].alt} />
           </div>
-          <div className="rectangle" onClick={() => handleFlip(0)}>
+          <div
+            className="rectangle"
+            ref={refs[0]}
+            onClick={() => handleFlip(0)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -126,10 +231,20 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
         </div>
         <div className="column-type2">
-          <div className="rectangle" onClick={() => handleFlip(1)}>
+          <div
+            className="rectangle"
+            ref={refs[1]}
+            onClick={() => handleFlip(1)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -140,6 +255,11 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[1] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
           <div className="square">
             <img src={images[1].src} alt={images[1].alt} />
@@ -149,7 +269,12 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
           <div className="square">
             <img src={images[2].src} alt={images[2].alt} />
           </div>
-          <div className="rectangle" onClick={() => handleFlip(2)}>
+          <div
+            className="rectangle"
+            ref={refs[2]}
+            onClick={() => handleFlip(2)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -160,10 +285,20 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[2] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
         </div>
         <div className="column-type2">
-          <div className="rectangle" onClick={() => handleFlip(3)}>
+          <div
+            className="rectangle"
+            ref={refs[3]}
+            onClick={() => handleFlip(3)}
+          >
+            {" "}
             <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -173,6 +308,11 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
                   <img src={images[11].src} alt={images[11].alt} />
                 </div>
               </div>
+            </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[3] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>
           </div>
           <div className="square">
