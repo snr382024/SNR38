@@ -44,7 +44,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, collectionName, d
             src={image.src}
             alt={image.alt || ""}
             className="carousel-image"
-            style={{ width: imageWidth, height: "auto", flexShrink: 0 }}
+            style={{ width: imageWidth, flexShrink: 0 }}
           />
         ))}
       </div>

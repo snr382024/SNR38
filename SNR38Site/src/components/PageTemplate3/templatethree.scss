@@ -39,7 +39,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         margin-bottom: 3.3vh;
         img {
           width: 12vw;
-          height: auto;
+          height: 18vh;
           box-shadow: $background-shadow;
         }
       }
@@ -48,7 +48,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         position: relative;
         perspective: 1000px;
         width: 12vw;
-        height: 71vh;
+        height: 67.5vh;
         cursor: pointer;
         // Overlay and icon wrapper
         .arrow-icon-wrapper {
@@ -81,7 +81,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         }
         img {
           width: 12vw;
-          height: 71vh;
+          height: 67vh;
           transition: transform 0.6s;
           transform-style: preserve-3d;
           box-shadow: $background-shadow;
@@ -137,20 +137,15 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   }
 
   .video-container {
-    flex: 2.5; // The video container takes up 2 parts of the space, twice as much as each column
-    max-height: 120vh; // This sets the maximum height the video can have
-    min-height: 50vh; // This sets a minimum height to ensure it doesn't become too small
+    flex: 1.5; 
+    max-height: 89vh;
     margin-bottom: 6vh; // Consistent bottom margin outside of media query
-    overflow: hidden;
-    position: relative;
-    box-shadow: $background-shadow;
-    aspect-ratio: 16 / 9; // Maintain a 16:9 aspect ratio
 
     video {
-      width: 100%;
-      height: 100%;
+      width: 100%; 
+      height: 100%; 
       object-fit: cover;
-      object-position: center; /* Adjusted for better centering */
+      box-shadow: $background-shadow;
     }
   }
 
@@ -170,7 +165,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       .column-type1,
       .column-type2 {
         width: calc(25% - 6vw);
-        margin-bottom: 2vh;
+        margin-bottom: -12vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -181,16 +176,16 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
           margin-bottom: 3.3vh;
           img {
             width: 20vw;
-            height: auto;
+            height: 15vh;
             box-shadow: $background-shadow;
           }
         }
         .rectangle {
           width: 20vw;
-          height: 41vh;
+          height: 45vh;
           img {
             width: 20vw;
-            height: 41vh;
+            height: 45vh;
             box-shadow: $background-shadow;
           }
         }
@@ -207,19 +202,30 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
           order: 2;
         }
       }
-    }
-
+    }   
+    
     .video-container {
-      flex: 0 0 auto;
-      width: 88vw; // Adjust the size as needed
-      height: 55vw;
-      margin-bottom: 2vh;
+      justify-content: center; // Centers horizontally in flex container
+      align-items: center;
+      display: flex; // Enables flexbox
+
+      width: 100%; // Adjust the size as needed
+      height: 40vh;
+      margin-bottom: 1vh;
+      margin-top: 3vh;
 
       video {
-        width: 100%;
+        width: auto;
         height: 100%;
-        object-position: center 20%;
+        object-position: center;
+        transform: scale(.5);
+        box-shadow: $background-shadow;
+        @media (max-width: 375px) {
+          max-height: 100vh;
+          transform: scale(.7);
+        }
       }
     }
+ 
   }
 }

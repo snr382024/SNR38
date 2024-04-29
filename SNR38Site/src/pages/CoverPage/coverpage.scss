@@ -6,6 +6,12 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
+    @media (max-width: 480px) {
+      width: 100vw;
+      height: 65vh;
+    
+    }
   
     .background-video {
       position: absolute;
@@ -14,6 +20,10 @@
       object-fit: cover;
       z-index: -1;
       opacity: .89;
+      @media (max-width: 480px) {
+        object-fit: cover;
+      
+      }
     }
   
     .video-overlay {
@@ -45,7 +55,7 @@
           }
         
           @media (max-width: 480px) {
-            font-size: 9vw; // Maximum font size on smaller screens
+            font-size: 10vw; // Maximum font size on smaller screens
           }
       }
     }

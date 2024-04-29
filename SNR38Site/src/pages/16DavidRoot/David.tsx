@@ -18,7 +18,16 @@ import LongBack3 from "./media/LongImage4.png";
 import LongFront4 from "./media/LongImage4.png";
 import LongBack4 from "./media/LongImage.png";
 
+import DeannaTest1 from "./media2/test.png";
+import DeannaTest2 from "./media2/Deanna petite look 1 detail shot.jpg";
+import DeannaTest3 from "./media2/Deanna petite look 2 detail shot.jpg";
+
+
+
+
+
 import DavidVideo from "./media/video1.mp4";
+import TestVideo from "./media2/Caitlin_Lookbook2.mp4";
 
 import "./david.scss";
 
@@ -28,12 +37,12 @@ const DavidRoot = () => {
   const designerName = "DAVID ROOT";
 
   const imageList = [
-    { src: Short1, alt: "Short1" },
-    { src: Short2, alt: "Short2" },
+    { src: DeannaTest2, alt: "Short1" },
+    { src: DeannaTest3, alt: "Short2" },
     { src: Short3, alt: "Short3" },
     { src: Short4, alt: "Short4" },
     { src: LongFront1, alt: "LongFront1" },
-    { src: LongBack1, alt: "LongBack1" },
+    { src: DeannaTest1, alt: "LongBack1" },
     { src: LongFront2, alt: "LongFront2" },
     { src: LongBack2, alt: "LongBack2" },
     { src: LongFront3, alt: "LongFront3" },
@@ -42,7 +51,7 @@ const DavidRoot = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = DavidVideo;
+  const videoSource = TestVideo;
 
   return (
     <div>
