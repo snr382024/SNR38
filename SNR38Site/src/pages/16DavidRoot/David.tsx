@@ -4,13 +4,13 @@ import PageTemplate3 from "../../components/PageTemplate3/TemplateThree";
 
 import DavidBanner from "../../assets/bannerImages/David-Banner.png";
 
-import Short1 from "./media/ShortImage.png";
-import Short2 from "./media/ShortImage.png";
+// import Short1 from "./media/ShortImage.png";
+// import Short2 from "./media/ShortImage.png";
 import Short3 from "./media/ShortImage.png";
 import Short4 from "./media/ShortImage.png";
 
 import LongFront1 from "./media/LongImage.png";
-import LongBack1 from "./media/LongImage2.png";
+// import LongBack1 from "./media/LongImage2.png";
 import LongFront2 from "./media/LongImage2.png";
 import LongBack2 from "./media/LongImage3.png";
 import LongFront3 from "./media/LongImage3.png";
@@ -26,7 +26,7 @@ import DeannaTest3 from "./media2/Deanna petite look 2 detail shot.jpg";
 
 
 
-import DavidVideo from "./media/video1.mp4";
+// import DavidVideo from "./media/video1.mp4";
 import TestVideo from "./media2/Caitlin_Lookbook2.mp4";
 
 import "./david.scss";
