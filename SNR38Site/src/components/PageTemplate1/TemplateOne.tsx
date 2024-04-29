@@ -15,8 +15,6 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
     const handleScroll = () => {
       const triggerHeight = window.innerHeight / 2;
 
-      // Get the first rectangle for the overlay
-
       images.forEach((_img, index) => {
         const elem = document.querySelector(`.rectangle:nth-child(${index + 2})`);
 
