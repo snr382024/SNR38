@@ -5,7 +5,7 @@ import "./coverpage.scss";
 const CoverPage: React.FC = () => {
   return (
     <div className="cover-page">
-      <video autoPlay loop muted className="background-video">
+      <video autoPlay loop playsInline muted className="background-video">
         <source src={CoverVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
