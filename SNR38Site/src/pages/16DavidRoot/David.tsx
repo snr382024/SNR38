@@ -4,30 +4,30 @@ import PageTemplate3 from "../../components/PageTemplate3/TemplateThree";
 
 import DavidBanner from "../../assets/bannerImages/David-Banner.png";
 
-// import Short1 from "./media/ShortImage.png";
-// import Short2 from "./media/ShortImage.png";
-import Short3 from "./media/ShortImage.png";
-import Short4 from "./media/ShortImage.png";
+// import Short1 from "./DavidMedia/ShortImage.png";
+// import Short2 from "./DavidMedia/ShortImage.png";
+import Short3 from "./DavidMedia/ShortImage.png";
+import Short4 from "./DavidMedia/ShortImage.png";
 
-import LongFront1 from "./media/LongImage.png";
-// import LongBack1 from "./media/LongImage2.png";
-import LongFront2 from "./media/LongImage2.png";
-import LongBack2 from "./media/LongImage3.png";
-import LongFront3 from "./media/LongImage3.png";
-import LongBack3 from "./media/LongImage4.png";
-import LongFront4 from "./media/LongImage4.png";
-import LongBack4 from "./media/LongImage.png";
+import LongFront1 from "./DavidMedia/LongImage.png";
+// import LongBack1 from "./DavidMedia/LongImage2.png";
+import LongFront2 from "./DavidMedia/LongImage2.png";
+import LongBack2 from "./DavidMedia/LongImage3.png";
+import LongFront3 from "./DavidMedia/LongImage3.png";
+import LongBack3 from "./DavidMedia/LongImage4.png";
+import LongFront4 from "./DavidMedia/LongImage4.png";
+import LongBack4 from "./DavidMedia/LongImage.png";
 
-import DeannaTest1 from "./media2/test.png";
-import DeannaTest2 from "./media2/Deanna petite look 1 detail shot.jpg";
-import DeannaTest3 from "./media2/Deanna petite look 2 detail shot.jpg";
-
-
+import DeannaTest1 from "./DavidMedia/test.png";
+import DeannaTest2 from "./DavidMedia/Deanna petite look 1 detail shot.jpg";
+import DeannaTest3 from "./DavidMedia/Deanna petite look 2 detail shot.jpg";
 
 
 
-// import DavidVideo from "./media/video1.mp4";
-import TestVideo from "./media2/Caitlin_Lookbook2.mp4";
+
+
+// import DavidVideo from "./DavidMedia/video1.mp4";
+import TestVideo from "./DavidMedia/Caitlin_Lookbook2.mp4";
 
 import "./david.scss";
 

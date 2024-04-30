@@ -11,10 +11,11 @@ const AlyssaJones = () => {
 
 
   return (
-    <div>
-      <ImageCarousel images={banner} />
-
-    </div>
+    <ImageCarousel
+    images={banner}
+    collectionName={collectionName}
+    designerName={designerName}
+  />
   );
 };
 

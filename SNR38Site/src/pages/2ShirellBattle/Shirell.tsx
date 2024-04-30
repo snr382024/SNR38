@@ -4,21 +4,21 @@ import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
 import ShirellBanner from "../../assets/bannerImages/Shirell-Banner.jpeg";
 
-import Short1 from "./media/ShortImage.png";
-import Short2 from "./media/ShortImage.png";
-import Short3 from "./media/ShortImage.png";
-import Short4 from "./media/ShortImage.png";
+import Short1 from "./ShirellMedia/ShortImage.png";
+import Short2 from "./ShirellMedia/ShortImage.png";
+import Short3 from "./ShirellMedia/ShortImage.png";
+import Short4 from "./ShirellMedia/ShortImage.png";
 
-import LongFront1 from "./media/LongImage.png";
-import LongBack1 from "./media/LongImage2.png";
-import LongFront2 from "./media/LongImage2.png";
-import LongBack2 from "./media/LongImage3.png";
-import LongFront3 from "./media/LongImage3.png";
-import LongBack3 from "./media/LongImage4.png";
-import LongFront4 from "./media/LongImage4.png";
-import LongBack4 from "./media/LongImage.png";
+import LongFront1 from "./ShirellMedia/LongImage.png";
+import LongBack1 from "./ShirellMedia/LongImage2.png";
+import LongFront2 from "./ShirellMedia/LongImage2.png";
+import LongBack2 from "./ShirellMedia/LongImage3.png";
+import LongFront3 from "./ShirellMedia/LongImage3.png";
+import LongBack3 from "./ShirellMedia/LongImage4.png";
+import LongFront4 from "./ShirellMedia/LongImage4.png";
+import LongBack4 from "./ShirellMedia/LongImage.png";
 
-import ShirellVideo from "./media/video1.mp4";
+import ShirellVideo from "./ShirellMedia/video1.mp4";
 
 
 import "./shirell.scss";
