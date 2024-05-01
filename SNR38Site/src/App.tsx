@@ -11,16 +11,16 @@ import Caitlin from "./pages/7CaitlinFracasso/Caitlin";
 import Annika from "./pages/8AnnikaGeissberger/Annika";
 import Alyssa from "./pages/9AlyssaJones/Alyssa";
 import Emma from "./pages/10EmmaKeating/Emma";
-// import Shannon from "./pages/11ShannonKonecke/Shannon";
-// import Madisyn from "./pages/12MadisynMartinelli/Madisyn";
-// import Deanna from "./pages/13DeannaMcnally/Deanna";
-// import Francesca from "./pages/14FrancescaMorabito/Francesca";
-// import Eva from "./pages/15EvaReed/Eva";
-// import David from "./pages/16DavidRoot/David";
+import Shannon from "./pages/11ShannonKonecke/Shannon";
+import Madisyn from "./pages/12MadisynMartinelli/Madisyn";
+import Deanna from "./pages/13DeannaMcnally/Deanna";
+import Francesca from "./pages/14FrancescaMorabito/Francesca";
+import Eva from "./pages/15EvaReed/Eva";
+import David from "./pages/16DavidRoot/David";
 // import Natalie from "./pages/17NatalieSweeney/Natalie";
-// import Nicole from "./pages/18NicoleTasca/Nicole";
-// import Mo from "./pages/19MoWalsh/Mo";
-// import SierraWeissner from "./pages/20SierraWeissner/Sierra";
+import Nicole from "./pages/18NicoleTasca/Nicole";
+import Mo from "./pages/19MoWalsh/Mo";
+import SierraWeissner from "./pages/20SierraWeissner/Sierra";
 
 
 
@@ -41,16 +41,16 @@ function App() {
       <Annika />
       <Alyssa />
       <Emma />
-      {/* <Shannon /> */}
-      {/* <Madisyn /> */}
-      {/* <Deanna /> */}
-      {/* <Francesca /> */}
-      {/* <Eva /> */}
-      {/* <David /> */}
+      <Shannon />
+      <Madisyn />
+      <Deanna />
+      <Francesca />
+      <Eva />
+      <David />
       {/* <Natalie /> */}
-      {/* <Nicole /> */}
-      {/* <Mo /> */}
-      {/* <SierraWeissner /> */}
+      <Nicole />
+      <Mo />
+      <SierraWeissner />
 
 
     </div>

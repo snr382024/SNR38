@@ -4,21 +4,21 @@ import PageTemplate4 from "../../components/PageTemplate4/TemplateFour";
 
 import SierraBanner from "../../assets/bannerImages/Sierra-Banner.png";
 
-import Short1 from "./SierraMedia/ShortImage.png";
-import Short2 from "./SierraMedia/ShortImage.png";
-import Short3 from "./SierraMedia/ShortImage.png";
-import Short4 from "./SierraMedia/ShortImage.png";
+import Short1 from "./Media/SierraLook1Detail.png";
+import Short2 from "./Media/SierraLook4Detail.jpg";
+import Short3 from "./Media/SierraLook3Detail.jpg";
+import Short4 from "./Media/SierraLook2Detail.png";
 
-import LongFront1 from "./SierraMedia/LongImage.png";
-import LongBack1 from "./SierraMedia/LongImage2.png";
-import LongFront2 from "./SierraMedia/LongImage2.png";
-import LongBack2 from "./SierraMedia/LongImage3.png";
-import LongFront3 from "./SierraMedia/LongImage3.png";
-import LongBack3 from "./SierraMedia/LongImage4.png";
-import LongFront4 from "./SierraMedia/LongImage4.png";
-import LongBack4 from "./SierraMedia/LongImage.png";
+import LongFront1 from "./Media/SierraLook1Front.png";
+import LongBack1 from "./Media/SierraLook1Back.png";
+import LongFront2 from "./Media/SierraLook4Front.jpg";
+import LongBack2 from "./Media/SierraLook4Back.jpg";
+import LongFront3 from "./Media/SierraLook3Front.jpg";
+import LongBack3 from "./Media/SierraLook3Back.jpg";
+import LongFront4 from "./Media/SierraLook2Front.png";
+import LongBack4 from "./Media/SierraLook2Back.png";
 
-import SierraVideo from "./SierraMedia/video1.mp4";
+import SierraVideo from "./Media/Caitlin_Lookbook2.mp4";
 
 import "./sierra.scss";
 
