@@ -3,21 +3,21 @@ import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
 
-import OliviaShort1 from "./OliviaMedia/DSC01899.jpg";
-import OliviaShort2 from "./OliviaMedia/DSC01965.jpg";
-import OliviaShort3 from "./OliviaMedia/DSC02003.jpg";
-import OliviaShort4 from "./OliviaMedia/DSC01934.jpg";
+import OliviaShort1 from "./Media/DSC01899.jpg";
+import OliviaShort2 from "./Media/DSC01965.jpg";
+import OliviaShort3 from "./Media/DSC02003.jpg";
+import OliviaShort4 from "./Media/DSC01934.jpg";
 
-import OliviaLongFront1 from "./OliviaMedia/DSC018851.jpg";
-import OliviaLongBack1 from "./OliviaMedia/ClareBackLegEdit.png";
-import OliviaLongFront2 from "./OliviaMedia/DSC01960.jpg";
-import OliviaLongBack2 from "./OliviaMedia/DSC01952.jpg";
-import OliviaLongFront3 from "./OliviaMedia/DSC01999.jpg";
-import OliviaLongBack3 from "./OliviaMedia/DSC01989.jpg";
-import OliviaLongFront4 from "./OliviaMedia/LOOK 1 FRONT.png";
-import OliviaLongBack4 from "./OliviaMedia/BACK .png";
+import OliviaLongFront1 from "./Media/DSC018851.jpg";
+import OliviaLongBack1 from "./Media/ClareBackLegEdit.png";
+import OliviaLongFront2 from "./Media/DSC01960.jpg";
+import OliviaLongBack2 from "./Media/DSC01952.jpg";
+import OliviaLongFront3 from "./Media/DSC01999.jpg";
+import OliviaLongBack3 from "./Media/DSC01989.jpg";
+import OliviaLongFront4 from "./Media/LOOK 1 FRONT.png";
+import OliviaLongBack4 from "./Media/BACK .png";
 
-import OliviaVideo from "./OliviaMedia/Caitlin_Lookbook2.mp4";
+import OliviaVideo from "./Media/Caitlin_Lookbook2.mp4";
 
 
 import OliviaBanner from "../../assets/bannerImages/Olivia-Banner.png";

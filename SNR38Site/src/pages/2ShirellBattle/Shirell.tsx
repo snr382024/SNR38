@@ -1,41 +1,23 @@
 // Shirell.tsx
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
-
-
-//3 collection
-import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
+import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 
 import ShirellBanner from "../../assets/bannerImages/Shirell-Banner.jpeg";
 
-import Short1 from "./ShirellMedia/ShortImage.png";
-import Short2 from "./ShirellMedia/ShortImage.png";
-import Short3 from "./ShirellMedia/ShortImage.png";
-import Short4 from "./ShirellMedia/ShortImage.png";
+import Short1 from "./Media/Detailcopy.jpg";
+import Short2 from "./Media/Detail .png";
+import Short3 from "./Media/Detail Shot.png";
+import Short4 from "./Media/detail4.png";
 
-import LongFront1 from "./ShirellMedia/LongImage.png";
-import LongBack1 from "./ShirellMedia/LongImage2.png";
-import LongFront2 from "./ShirellMedia/LongImage2.png";
-import LongBack2 from "./ShirellMedia/LongImage3.png";
-import LongFront3 from "./ShirellMedia/LongImage3.png";
-import LongBack3 from "./ShirellMedia/LongImage4.png";
-import LongFront4 from "./ShirellMedia/LongImage4.png";
-import LongBack4 from "./ShirellMedia/LongImage.png";
-
-import ShirellVideo from "./ShirellMedia/video1.mp4";
+import LongFront1 from "./Media/Shirell Look 2 Front.png";
+import LongBack1 from "./Media/Shirell 2 Back.png";
+import LongFront2 from "./Media/Shireel Look 3 front.png";
+import LongBack2 from "./Media/Shirell 3 Front.png";
+import LongFront3 from "./Media/Shireel 1 Side.png";
+import LongBack3 from "./Media/Shireel 1 Front p2.png";
 
 
-import ShirellLongFront1 from "./media/Shireel 1 Front p2.png";
-import ShirellLongBack1 from "./media/Shireel 1 Side.png";
-// import ShirellLongFront2 from "./media/LongImage2.png";
-// import ShirellLongBack2 from "./media/LongImage3.png";
-// import ShirellLongFront3 from "./media/LongImage3.png";
-// import ShirellLongBack3 from "./media/LongImage4.png";
-// import ShirellLongFront4 from "./media/LongImage4.png";
-// import ShirellLongBack4 from "./media/LongImage.png";
-
-
-
-
+import ShirellVideo from "./Media/Caitlin_Lookbook2.mp4";
 import "./shirell.scss";
 
 const ShirellBattle = () => {
@@ -48,14 +30,12 @@ const ShirellBattle = () => {
     { src: Short2, alt: "Short2" },
     { src: Short3, alt: "Short3" },
     { src: Short4, alt: "Short4" },
-    { src: ShirellLongFront1, alt: "LongFront1" },
-    { src: ShirellLongBack1, alt: "LongBack1" },
+    { src: LongFront1, alt: "LongFront1" },
+    { src: LongBack1, alt: "LongBack1" },
     { src: LongFront2, alt: "LongFront2" },
     { src: LongBack2, alt: "LongBack2" },
     { src: LongFront3, alt: "LongFront3" },
     { src: LongBack3, alt: "LongBack3" },
-    { src: LongFront4, alt: "LongFront4" },
-    { src: LongBack4, alt: "LongBack4" },
   ];
 
   const videoSource = ShirellVideo;
@@ -68,7 +48,7 @@ const ShirellBattle = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc={videoSource} />
+      <PageTemplate5 images={imageList} videoSrc={videoSource} />
     </div>
   );
 };

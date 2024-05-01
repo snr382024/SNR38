@@ -74,6 +74,12 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         }
       }
 
+      .square{
+        img{
+          min-height: 24vh;
+        }
+      }
+
       .rectangle {
         position: relative;
         perspective: 1000px;
