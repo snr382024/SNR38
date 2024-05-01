@@ -1,5 +1,8 @@
 // Shirell.tsx
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
+
+
+//3 collection
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
 import ShirellBanner from "../../assets/bannerImages/Shirell-Banner.jpeg";
@@ -21,6 +24,18 @@ import LongBack4 from "./ShirellMedia/LongImage.png";
 import ShirellVideo from "./ShirellMedia/video1.mp4";
 
 
+import ShirellLongFront1 from "./media/Shireel 1 Front p2.png";
+import ShirellLongBack1 from "./media/Shireel 1 Side.png";
+// import ShirellLongFront2 from "./media/LongImage2.png";
+// import ShirellLongBack2 from "./media/LongImage3.png";
+// import ShirellLongFront3 from "./media/LongImage3.png";
+// import ShirellLongBack3 from "./media/LongImage4.png";
+// import ShirellLongFront4 from "./media/LongImage4.png";
+// import ShirellLongBack4 from "./media/LongImage.png";
+
+
+
+
 import "./shirell.scss";
 
 const ShirellBattle = () => {
@@ -33,8 +48,8 @@ const ShirellBattle = () => {
     { src: Short2, alt: "Short2" },
     { src: Short3, alt: "Short3" },
     { src: Short4, alt: "Short4" },
-    { src: LongFront1, alt: "LongFront1" },
-    { src: LongBack1, alt: "LongBack1" },
+    { src: ShirellLongFront1, alt: "LongFront1" },
+    { src: ShirellLongBack1, alt: "LongBack1" },
     { src: LongFront2, alt: "LongFront2" },
     { src: LongBack2, alt: "LongBack2" },
     { src: LongFront3, alt: "LongFront3" },

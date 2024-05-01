@@ -4,20 +4,20 @@ import PageTemplate2 from "../../components/PageTemplate2/TemplateTwo";
 
 import EvaBanner from "../../assets/bannerImages/Eva-Banner.png";
 
-import Short1 from "./EvaMedia/ShortImage.png";
-import Short2 from "./EvaMedia/ShortImage.png";
-import Short3 from "./EvaMedia/ShortImage.png";
-import Short4 from "./EvaMedia/ShortImage.png";
+import Short1 from "./Media/ShortImage.png";
+import Short2 from "./Media/ShortImage.png";
+import Short3 from "./Media/ShortImage.png";
+import Short4 from "./Media/ShortImage.png";
 
-import Long1 from "./EvaMedia/LongImage.png";
-import Long2 from "./EvaMedia/LongImage.png";
+import Long1 from "./Media/LongImage.png";
+import Long2 from "./Media/LongImage.png";
 
-import Medium1 from "./EvaMedia/MediumImage.jpg";
-import Medium2 from "./EvaMedia/MediumImage.jpg";
-import Medium3 from "./EvaMedia/MediumImage.jpg";
+import Medium1 from "./Media/MediumImage.jpg";
+import Medium2 from "./Media/MediumImage.jpg";
+import Medium3 from "./Media/MediumImage.jpg";
 
 
-import EvaVideo from "./EvaMedia/video1.mp4";
+import EvaVideo from "./Media/video1.mp4";
 
 import "./eva.scss";
 

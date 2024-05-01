@@ -27,7 +27,6 @@ const NameDisplay: React.FC = () => {
   const namesRows = [
     {
       names: [
-        "DAISY ANGUISACA LAZO",
         "SHIRELL BATTLE",
         "OLIVIA CAVALIERO",
         "ALIAH CHAMORRO",
