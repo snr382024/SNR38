@@ -10,19 +10,19 @@ import Short3 from "./Media/Look3Detail.png";
 import Short4 from "./Media/Look4Detail.png";
 
 import LongFront1 from "./Media/Look2Front.png";
-import LongBack1 from "./Media/JM another edit .png";
+// import LongBack1 from "./Media/JM another edit .png";
 
 import LongFront2 from "./Media/Look4Front.png";
-import LongBack2 from "./Media/Look4Side.png";
+// import LongBack2 from "./Media/Look4Side.png";
 
 import MediumFront1 from "./Media/Caitlin - Look 5 - Front.jpg";
-import MediumBack1 from "./Media/Caitlin - Look 5 - Pose.jpg";
+// import MediumBack1 from "./Media/Caitlin - Look 5 - Pose.jpg";
 
 import MediumFront2 from "./Media/JM EDIT.png";
-import MediumBack2 from "./Media/Look1Side.png";
+// import MediumBack2 from "./Media/Look1Side.png";
 
 import MediumFront3 from "./Media/Look3Front.png";
-import MediumBack3 from "./Media/Look3Back.png";
+// import MediumBack3 from "./Media/Look3Back.png";
 
 
 import CaitlinVideo from "./Media/Caitlin_Lookbook2.mp4";

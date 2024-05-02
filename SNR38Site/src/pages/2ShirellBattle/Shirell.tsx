@@ -5,7 +5,7 @@ import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 import ShirellBanner from "../../assets/bannerImages/Shirell-Banner.jpeg";
 
 import Short1 from "./Media/Detailcopy.jpg";
-import Short2 from "./Media/Detail .png";
+import Short2 from "./Media/Detail.png";
 import Short3 from "./Media/Detail Shot.png";
 import Short4 from "./Media/detail4.png";
 
